@@ -43,6 +43,7 @@
 ```
   bundle exec rails db:create
   bundle exec raild db:migrate
+  bundle exec rails db:seed
 ```
 5. Start application
   `rails s`
