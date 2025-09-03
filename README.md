@@ -5,11 +5,11 @@
 * Retrieve forecast for a given address
 * Cache results for 30 minutes by ZIP code
   * The brief says to only pull data once every 30 minutes.  But rather than cache it, we can save all weather retrieved from the source and keep it for a history. It would be nice to do something with that history but we'll see if there's time.
+  * UPDATE: I don't think we're going to get to a history here.  But we can use the `updated_at` timestamp to know if we need to repoll.
 
 
 * Implications:
   * Weather APIs seem to use lat/long and not an address.  So we'll need some geocoding here or we'll need to store a lookup table.  A lookup table is less likely to break, but I don't know if one exists.
-    * Turns out that data does exist [https://download.geonames.org/export/dump/](https://download.geonames.org/export/dump/)
   * Retrieving a forecast will definately require talking to an API.  So we'll need to have tests around communication disruptions, rate limits, etc.  It'd be nice to implement multiple services, so we'll stub that out at least.
   * Let's try to be good and internationalize this from the start.  We don't know what languages we'll want to support.
 

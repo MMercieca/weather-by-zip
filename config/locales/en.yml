@@ -30,3 +30,4 @@
 en:
   http_service:
     invalid_url: "Invalid URL"
+  current_temp: "Current Temp"

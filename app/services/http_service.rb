@@ -22,7 +22,13 @@ class HttpService
     @scheme = @uri.scheme
   end
 
-  def get
+  def run
+    return method_get if method == "GET"
+
+    raise NotImplementedError
+  end
+
+  def method_get
     http = Net::HTTP.new(host, port)
     http.use_ssl = (scheme == "https")
 
@@ -37,11 +43,5 @@ class HttpService
     end
 
     raise CommunicationError
-  end
-
-  def exec
-    return get if method == "GET"
-
-    raise NotImplementedError
   end
 end

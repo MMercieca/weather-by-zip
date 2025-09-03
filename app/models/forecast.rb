@@ -1,5 +1,5 @@
 class Forecast < ApplicationRecord
-  belongs_to :zip
+  belongs_to :zipcode, optional: true
 
   def self.for(zip)
     zipcode = Zipcode.from_code(zip)
@@ -7,9 +7,13 @@ class Forecast < ApplicationRecord
     forecast = Forecast.where(zipcodes_id: zipcode.id).first
 
     if forecast.nil? || forecast.updated_at < 30.minutes.ago
-      # TODOMPM - get new forecast
+      return get_current(zipcode)
     end
 
     forecast
+  end
+
+  def self.get_current(zipcode)
+    OpenMetroForecast.current(zipcode: zipcode)
   end
 end
