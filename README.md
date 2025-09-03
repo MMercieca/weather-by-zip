@@ -54,6 +54,7 @@ On the plus side: everything is standard Rails and I think pretty well segmented
 * Rails 7.2.2
   * The job description calls for Rails 6, but that's past end of life.  So we'll use Rails 7 and plan to upgrade to 8 in the 3 hour time limit.
 * Postgres
+  * On Mac: `brew install postgresql`
 
 ## Setup
 
