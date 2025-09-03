@@ -15,7 +15,8 @@ class ForecastController < ApplicationController
     zip = params[:zip]
 
     if !zip || !is_number?(zip) || zip.length > 5
-      raise ArgumentError
+      zip = '49503'
+      flash[:error] = I18n.t("zipcode.not_found")
     end
 
     return zip

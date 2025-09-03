@@ -20,12 +20,18 @@
 * Fill out the README with the plan --- done
 * Find a weather API -- [open-metro.com](https://open-meteo.com/en/docs?location_mode=csv_coordinates&current=temperature_2m,relative_humidity_2m,precipitation,apparent_temperature)
 * Design the weather database model --- done
-* Retrieve weather data from API
-  * This is where we'll need unit testing
+* Retrieve weather data from API --- done
+  * This is where we'll need unit testing -- in progress
   * Are we going to translate from ZIP codes first or get it working with lat/long first?
-    * We'll seed some zip codes and do translation in the next step
-* Translate addresses to zip codes
+    * We'll seed some zip codes and do translation in the next step -- ended up seeding all the zip codes
+* Translate addresses to zip codes -- Since I only have zip code lookup, I'll not hide that.  We're going to 
 * Make UI prettier / Add some personality
+
+### How did it go?
+
+Doing everything from scratch took a bit longer than expected.  I didn't have time to make the UI very pretty. I wanted to use Bootstrap and add some basic styles but it's more honest to leave it this way.
+
+I did get some good unit tests for the `HttpService`.  Fortunately there's not too much logic in the `Forecast` model that needs testing.
 
 ## Dependencies
 

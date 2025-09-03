@@ -50,7 +50,7 @@ RSpec.describe HttpService, type: :service do
 
       it 'returns the body when successful' do
         http = described_class.new(url: 'https://www.example.com')
-        text = http.get
+        text = http.run
 
         expect(text).to eq(body)
       end
@@ -66,7 +66,7 @@ RSpec.describe HttpService, type: :service do
         end
 
         it 'throws a CommunicationError' do
-          expect { HttpService.new(url: 'https://www.example.com').get }.to raise_error(CommunicationError)
+          expect { HttpService.new(url: 'https://www.example.com').run }.to raise_error(CommunicationError)
         end
       end
 
@@ -76,7 +76,7 @@ RSpec.describe HttpService, type: :service do
         end
 
         it 'throws a CommunicationError' do
-          expect { HttpService.new(url: 'https://www.example.com').get }.to raise_error(CommunicationError)
+          expect { HttpService.new(url: 'https://www.example.com').run }.to raise_error(CommunicationError)
         end
       end
     end

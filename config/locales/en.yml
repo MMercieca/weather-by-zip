@@ -38,3 +38,6 @@ en:
   todays_high: "Todays high"
   todays_low: "Todays low"
   forecast_for: "Forecast for"
+  current: "Current"
+  farenheit: "Farenheit"
+  celcius: "Celcius"
