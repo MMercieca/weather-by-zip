@@ -1,4 +1,5 @@
 class ForecastController < ApplicationController
+
   def default
     @zip = "49503"
     @zipcode = Zipcode.from_code(@zip)
@@ -9,6 +10,9 @@ class ForecastController < ApplicationController
     @zip = zip_from_params
     @zipcode = Zipcode.from_code(@zip)
     @forecast = Forecast.for(@zip)
+  end
+
+  def communication_error
   end
 
   def zip_from_params

@@ -41,3 +41,7 @@ en:
   current: "Current"
   farenheit: "Farenheit"
   celcius: "Celcius"
+  communication_error: "We're sorry, but we could not communicate with any available APIs."
+  try_again: "Please try again."
+  zipcode: "Zipcode"
+  get_forecast: "Get Forecast"

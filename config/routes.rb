@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index
   get "forecast/:zip", to: "forecast#show"
   get "forecast", to: "forecast#show"
+  get "communication_error", to: "forecast#communication_error"
   root "forecast#default"
 end
