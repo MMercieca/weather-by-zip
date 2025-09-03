@@ -3,6 +3,7 @@
 ## Goal
 
 * Retrieve forecast for a given address
+  * So I ddn't have time to geocode the addresses.  Instead I have a table of zip codes.  I'm not going to hide this but it's also not what the brief ased for.  Since we are caching the results by ZIP I hope this is OK.
 * Cache results for 30 minutes by ZIP code
   * The brief says to only pull data once every 30 minutes.  But rather than cache it, we can save all weather retrieved from the source and keep it for a history. It would be nice to do something with that history but we'll see if there's time.
   * UPDATE: I don't think we're going to get to a history here.  But we can use the `updated_at` timestamp to know if we need to repoll.
