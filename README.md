@@ -18,10 +18,12 @@
 * `rails new` the app --- done
 * Fill out the README with the plan --- done
 * Find a weather API -- [open-metro.com](https://open-meteo.com/en/docs?location_mode=csv_coordinates&current=temperature_2m,relative_humidity_2m,precipitation,apparent_temperature)
-* Design the weather database model
+* Design the weather database model --- done
 * Retrieve weather data from API
   * This is where we'll need unit testing
   * Are we going to translate from ZIP codes first or get it working with lat/long first?
+    * We'll seed some zip codes and do translation in the next step
+* Translate addresses to zip codes
 * Make UI prettier / Add some personality
 
 ## Dependencies
