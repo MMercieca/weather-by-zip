@@ -3,6 +3,8 @@
 class CommunicationError < StandardError; end
 
 class HttpService
+  attr_accessor :method, :body, :host, :port, :uri, :scheme
+
   def initialize(url:, method: "GET", body: nil)
     parse_uri(url)
     raise ArgumentError, I18n.t("http_service.invalid_url") if @port.nil? || @host.nil? || @scheme.nil?
@@ -10,30 +12,6 @@ class HttpService
 
     @method = method
     @body = nil
-  end
-
-  def method
-    @method
-  end
-
-  def body
-    @body
-  end
-
-  def host
-    @host
-  end
-
-  def port
-    @port
-  end
-
-  def uri
-    @uri
-  end
-
-  def scheme
-    @scheme
   end
 
   def parse_uri(url)
