@@ -31,6 +31,8 @@
 
 ### How did it go?
 
+[Demo](demo.mp4)
+
 Doing everything from scratch took a bit longer than expected.  I didn't have time to make the UI very pretty. I wanted to use Bootstrap and add some basic styles but it's more honest to leave it this way.
 
 I did get some good unit tests for the `HttpService`.  Fortunately there's not too much logic in the `Forecast` model that needs testing. I figred the main things I needed to test were:
