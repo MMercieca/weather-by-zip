@@ -36,6 +36,6 @@ class OpenMetroForecast
 
   def self.celcius_from_farenheit(farenheit)
     temp = farenheit.to_f
-    (temp - 32) * 5/9
+    ((temp - 32) * 5/9).round(1)
   end
 end

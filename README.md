@@ -10,6 +10,7 @@
 
 * Implications:
   * Weather APIs seem to use lat/long and not an address.  So we'll need some geocoding here or we'll need to store a lookup table.  A lookup table is less likely to break, but I don't know if one exists.
+    * It exists and I'm running out of time - https://simplemaps.com/data/us-zips. This is what we'll use
   * Retrieving a forecast will definately require talking to an API.  So we'll need to have tests around communication disruptions, rate limits, etc.  It'd be nice to implement multiple services, so we'll stub that out at least.
   * Let's try to be good and internationalize this from the start.  We don't know what languages we'll want to support.
 

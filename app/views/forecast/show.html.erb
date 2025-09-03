@@ -1,1 +1,5 @@
-<%= I18n.t('current_temp') %>: <%= @forecast.farenheit %>F / <%= @forecast.celcius %>C
+<%= I18n.t('forecast_for') %> <%= @zipcode.locality %><br />
+<%= I18n.t('current_temp') %>: <%= @forecast.farenheit %>F / <%= @forecast.celcius %>C <br />
+<%= I18n.t('todays_high') %>: <%= @forecast.farenheit_high %>F / <%= @forecast.celcius_high %>C <br />
+<%= I18n.t('todays_low') %>: <%= @forecast.farenheit_low %>F / <%= @forecast.celcius_low %>C<br />
+<%= I18n.t('last_updated') %>: <%= @forecast.last_updated %>

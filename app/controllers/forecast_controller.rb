@@ -4,8 +4,9 @@ class ForecastController < ApplicationController
   end
 
   def show
-    zip = zip_from_params
-    @forecast = Forecast.for(zip)
+    @zip = zip_from_params
+    @zipcode = Zipcode.from_code(@zip)
+    @forecast = Forecast.for(@zip)
   end
 
   def zip_from_params
