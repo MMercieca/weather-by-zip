@@ -22,13 +22,14 @@
 * Retrieve weather data from API
   * This is where we'll need unit testing
   * Are we going to translate from ZIP codes first or get it working with lat/long first?
-* Make UI prettier
+* Make UI prettier / Add some personality
 
 ## Dependencies
 
 * Ruby 3.1.0 (also in .tool-versionss)
 * Rails 7.2.2
   * The job description calls for Rails 6, but that's past end of life.  So we'll use Rails 7 and plan to upgrade to 8 in the 3 hour time limit.
+* Postgres
 
 ## Setup
 
@@ -44,7 +45,7 @@
   bundle exec raild db:migrate
 ```
 5. Start application
-  `bin/dev`
+  `rails s`
 
 ## Deployment
 

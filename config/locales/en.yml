@@ -28,4 +28,5 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  http_service:
+    invalid_url: "Invalid URL"

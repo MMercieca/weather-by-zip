@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zip: one
+  celcius: 1.5
+  farenheit: 1.5
+  celcius_high: 1.5
+  celcius_low: 1.5
+  farenheit_high: 1.5
+  farenheit_low: 1.5
+  description: MyString
+  precipitation_probability: 1.5
+  service: MyString
+  raw_data: MyString
+
+two:
+  zip: two
+  celcius: 1.5
+  farenheit: 1.5
+  celcius_high: 1.5
+  celcius_low: 1.5
+  farenheit_high: 1.5
+  farenheit_low: 1.5
+  description: MyString
+  precipitation_probability: 1.5
+  service: MyString
+  raw_data: MyString
