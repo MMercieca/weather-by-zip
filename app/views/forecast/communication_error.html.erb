@@ -1,7 +1,7 @@
 <p><%= I18n.t('communication_error') %></p>
 <p><%= I18n.t('try_again') %></p>
 <%= form_with(url: "/forecast", method: :get, local: true) do |form| %>
-  <%= form.label :zip, I18n.t("zipcode") %>
+  <%= form.label :zip, I18n.t("zipcode.zipcode") %>
   <%= form.text_field :zip  %>
   <%= form.submit value: I18n.t("get_forecast") %>
 <% end %>

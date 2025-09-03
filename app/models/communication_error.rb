@@ -1,0 +1,2 @@
+class CommunicationError < StandardError
+end

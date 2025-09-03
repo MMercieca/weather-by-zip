@@ -1,4 +1,5 @@
 class ForecastController < ApplicationController
+  rescue_from ::CommunicationError, with: { redirect_to: "/communication_error" }
 
   def default
     @zip = "49503"
@@ -17,6 +18,12 @@ class ForecastController < ApplicationController
 
   def zip_from_params
     zip = params[:zip]
+
+    begin
+      @zipcode = Zipcode.from_code(zip)
+    rescue ArgumentError
+      zip = nil
+    end
 
     if !zip || !is_number?(zip) || zip.length > 5
       zip = '49503'

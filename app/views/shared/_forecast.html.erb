@@ -30,7 +30,7 @@
 </table>
 <br />
 <%= form_with(url: "/forecast", method: :get, local: true) do |form| %>
-  <%= form.label :zip, "Zipcode:" %>
+  <%= form.label :zip, I18n.t("zipcode.zipcode") %>
   <%= form.text_field :zip, value: @zipcode.zip %>
-  <%= form.submit "Get Forecast" %>
+  <%= form.submit I18n.t("get_forecast") %>
 <% end %>

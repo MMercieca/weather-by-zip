@@ -32,6 +32,7 @@ en:
     invalid_url: "Invalid URL"
   zipcode:
     not_found: "That does not appear to be a US zip code."
+    zipcode: "Zipcode"
   current_temp: "Current Temp"
   just_now: "Just now"
   last_updated: "Last updated at"
@@ -43,5 +44,4 @@ en:
   celcius: "Celcius"
   communication_error: "We're sorry, but we could not communicate with any available APIs."
   try_again: "Please try again."
-  zipcode: "Zipcode"
   get_forecast: "Get Forecast"

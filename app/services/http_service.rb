@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-class CommunicationError < StandardError; end
-
 class HttpService
   attr_accessor :method, :body, :host, :port, :uri, :scheme
 
