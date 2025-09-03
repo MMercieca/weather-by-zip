@@ -1,6 +1,8 @@
 class ForecastController < ApplicationController
   def default
-    redirect_to '/forecast/49503'
+    @zip = "49503"
+    @zipcode = Zipcode.from_code(@zip)
+    @forecast = Forecast.for(@zip)
   end
 
   def show
@@ -13,7 +15,7 @@ class ForecastController < ApplicationController
     zip = params[:zip]
 
     if !zip || !is_number?(zip) || zip.length > 5
-      raise INeedAnErrorHere
+      raise ArgumentError
     end
 
     return zip
